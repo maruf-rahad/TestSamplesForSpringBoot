@@ -1,13 +1,14 @@
 package com.example.testmultiple.controller;
 
 import com.example.testmultiple.model.Product;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@Tag(name = "Product Apis", description = "create, get, update, delete")
 public class ProductController {
-
 
     @GetMapping("/product")
     public ResponseEntity<String> getAllProducts() {
